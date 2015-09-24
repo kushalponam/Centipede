@@ -1,3 +1,4 @@
+Adding from Sid V Side
 /* 
  * The AGameAWeek/PMC Template thing
  * Week 4 edition!
@@ -44,16 +45,6 @@ $MyName=$MyUser.getName();
 $j_scaleX=1;
 $j_scaleY=1;
 $flipat=120;
-$flipcred=0;$creds=0;
-
-$titletick=0;$tune=0;
-
-$GameType=2;
-$GameMode=-2;
-$EndofGame=0;
-$MenuIn=-32;
-$Debug='';
-
 $kdown=0;
 
 $waiter=0;
