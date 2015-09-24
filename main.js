@@ -2,8 +2,9 @@
 
 var canvas,context;
 var WIDTH = 1024; 
-var HEIGHT = 800;
+var HEIGHT = 720;
 var FPS = 60;
+var player;
 
 function SetUpCanvas(){
 canvas = document.getElementById("c");
@@ -17,10 +18,8 @@ canvas.style.position = "absolute";
 
 function InitGame(){
 	SetUpCanvas();
-   //Car.Init();	
-   var myBody = new Body("Bad234","Ass",'unicorn.png');
-   console.log(myBody.firstName);
-   
+	player = new MovableBody(0,0,'unicorn.png');
+	player.Init();	  
 }
 
 setInterval(function(){
@@ -28,19 +27,14 @@ setInterval(function(){
 	Draw();
 },1000/FPS);
 
-var textX=500,textY = 50;
 function Update(){
-    textX+=1;
-	//textY+=1;
-	
+ player.update();
 }
 function Draw(){
 	context.clearRect(0,0,WIDTH,HEIGHT);
-	context.fillStyle = "#500";
-	context.fillText(""+textX+" "+textY,textX,textY);
+	player.draw();
 }
 
 function DebugLog(debugtext){
 	document.getElementById("debug").innerHTML = debugtext;
 }
-
