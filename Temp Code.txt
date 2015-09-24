@@ -1,4 +1,9 @@
+
 Adding from Sid V Side
+
+Kushal has written this line
+I am exploring how to Merge two files on GitHub
+
 /* 
  * The AGameAWeek/PMC Template thing
  * Week 4 edition!
@@ -688,3 +693,4 @@ if (pods==0) GetMore();$spd=$spd+0.25;$Score=$score+1000;end;
     if (playkey(1) && $EndofGame==0) $EndofGame=99; end;
     if ($EndofGame!=0) EndGame(delta);end;
 end;
+
