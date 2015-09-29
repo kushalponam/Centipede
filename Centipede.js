@@ -35,6 +35,7 @@ function Centipede(i_posx,i_posy,headimage,tailimage){
 	}
 	
 	this.update = function(){
+
 		 if(keydown.d) {
 			 Nodes[0].lastpos_x =  Nodes[0].pos_x;
 			 Nodes[0].lastpos_y =  Nodes[0].pos_y;
@@ -47,6 +48,7 @@ function Centipede(i_posx,i_posy,headimage,tailimage){
 				Nodes[i].pos_x = Nodes[i-1].lastpos_x;
 				Nodes[i].pos_y = Nodes[i-1].lastpos_y;
 			  }
+
 		 }else if(keydown.w) {
 			 Nodes[0].lastpos_x =  Nodes[0].pos_x;
 			 Nodes[0].lastpos_y =  Nodes[0].pos_y;
