@@ -7,8 +7,6 @@ Node = function(){
 	this.lastpos_x = 0;
 	this.lastpos_y = 0;
 	this.base_Image=new Image();
-	
-	
 }
 
 function Centipede(i_posx,i_posy,headimage,tailimage){
@@ -85,13 +83,8 @@ function Centipede(i_posx,i_posy,headimage,tailimage){
 				Nodes[i].lastpos_y = Nodes[i].pos_y;
 				Nodes[i].pos_x = Nodes[i-1].lastpos_x;
 				Nodes[i].pos_y = Nodes[i-1].lastpos_y;
-			  }
-			 
-			 
-			 
+			  } 
 		 }
-		
-		
 	}
 	
 	this.draw = function(){

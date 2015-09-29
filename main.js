@@ -5,6 +5,9 @@ var HEIGHT = 720;
 var FPS = 30;
 var player;
 
+var obj1;
+var obj2;
+
 function SetUpCanvas(){
 canvas = document.getElementById("c");
 context = canvas.getContext('2d');
@@ -19,9 +22,13 @@ canvas.background= "transparent";
 function InitGame(){
 	SetUpCanvas();
 	player = new Centipede(500,500,'unicorn.png','unicorn.png');
+	
+	obj1 = new MovableBody(100,100,'unicorn1.png');
+	obj2 = new MovableBody(500,100,'unicorn1.png');
+	
+	obj1.Init();
+	obj2.Init();
 	player.Init();
-	//player = new MovableBody(0,0,'unicorn.png');
-	//player.Init();	  
 }
 
 setInterval(function(){
@@ -32,12 +39,27 @@ setInterval(function(){
 
 
 function Update(){
+
+obj1.update();
+//obj2.update();
+
+if(obj1.getBody().Collide(obj2.getBody()))
+{
+	DebugLog("Hit!");
+}else
+{
+	DebugLog("No Hit!");
+}
+
+
  player.update();
 }
 
 function Draw(){
 	context.clearRect(0,0,WIDTH,HEIGHT);
 
+    obj1.draw();
+	obj2.draw();
 	player.draw();
 
 }
