@@ -3,7 +3,7 @@
 var canvas,context;
 var WIDTH = 1024; 
 var HEIGHT = 720;
-var FPS = 60;
+var FPS = 30;
 var player;
 
 function SetUpCanvas(){
@@ -18,8 +18,10 @@ canvas.style.position = "absolute";
 
 function InitGame(){
 	SetUpCanvas();
-	player = new MovableBody(0,0,'unicorn.png');
-	player.Init();	  
+	player = new Centipede(500,500,'unicorn.png','unicorn.png');
+	player.Init();
+	//player = new MovableBody(0,0,'unicorn.png');
+	//player.Init();	  
 }
 
 setInterval(function(){
