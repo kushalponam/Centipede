@@ -2,7 +2,7 @@
 var canvas,context;
 var WIDTH = 1024; 
 var HEIGHT = 720;
-var FPS = 60;
+var FPS = 30;
 var player;
 
 function SetUpCanvas(){
@@ -10,15 +10,18 @@ canvas = document.getElementById("c");
 context = canvas.getContext('2d');
 canvas.height = HEIGHT;
 canvas.width = WIDTH;
-canvas.style.left = "500px";
-canvas.style.top = "100px";
+canvas.style.left = "0px";
+canvas.style.top = "0px";
 canvas.style.position = "absolute";
+canvas.background= "transparent";
 }
 
 function InitGame(){
 	SetUpCanvas();
-	player = new MovableBody(0,0,'unicorn.png');
-	player.Init();	  
+	player = new Centipede(500,500,'unicorn.png','unicorn.png');
+	player.Init();
+	//player = new MovableBody(0,0,'unicorn.png');
+	//player.Init();	  
 }
 
 setInterval(function(){
