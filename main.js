@@ -1,5 +1,4 @@
 // JavaScript Document
-
 var canvas,context;
 var WIDTH = 1024; 
 var HEIGHT = 720;
@@ -29,12 +28,17 @@ setInterval(function(){
 	Draw();
 },1000/FPS);
 
+
+
 function Update(){
  player.update();
 }
+
 function Draw(){
 	context.clearRect(0,0,WIDTH,HEIGHT);
+
 	player.draw();
+
 }
 
 function DebugLog(debugtext){
